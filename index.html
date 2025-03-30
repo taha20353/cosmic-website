@@ -14,23 +14,23 @@
     <nav class="navbar">
         <div class="logo">Cosmic</div>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#hero">Home</a>
+            <a href="#features">About</a>
+            <a href="#footer">Contact</a>
         </div>
     </nav>
 
     <main class="content">
-        <section class="hero">
+        <section id="hero" class="hero">
             <h1 class="glitch" data-text="Welcome to the Cosmos">Welcome to the Cosmos</h1>
             <p class="subtitle">Explore the infinite possibilities</p>
             <div class="cta-buttons">
-                <button class="primary-btn">Begin Journey</button>
-                <button class="secondary-btn">Learn More</button>
+                <button class="primary-btn" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Begin Journey</button>
+                <button class="secondary-btn" onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
             </div>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
             <div class="feature-card">
                 <i class="fas fa-rocket"></i>
                 <h3>Explore</h3>
@@ -49,13 +49,21 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:taha20353@gmail.com" title="Email" class="contact-link"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/taha20353" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mostafa-sultan-60a147262/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="tel:+201025033448" title="Phone" class="contact-link"><i class="fas fa-phone"></i></a>
         </div>
-        <p>&copy; 2024 Cosmic Experience. All rights reserved.</p>
+        <div class="footer-info">
+            <p>&copy; 2024 Cosmic Experience. All rights reserved.</p>
+            <p class="designer-credit">Designed & Developed by <a href="https://github.com/taha20353" class="designer-link">Mostafa Sultan</a> | <span class="nickname">Mostafa1_1</span></p>
+            <p class="contact-info">
+                <a href="mailto:taha20353@gmail.com" class="contact-link">taha20353@gmail.com</a> | 
+                <a href="tel:+201025033448" class="contact-link">+20 102 503 3448</a>
+            </p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
