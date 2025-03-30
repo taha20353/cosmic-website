@@ -196,10 +196,16 @@ body {
 
 /* Footer */
 footer {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
     position: relative;
     z-index: 2;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .social-links {
@@ -215,6 +221,62 @@ footer {
 
 .social-links a:hover {
     color: var(--primary-color);
+}
+
+/* Footer Styles */
+.footer-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.designer-credit {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #a8b2d1;
+    transition: color 0.3s ease;
+}
+
+.designer-link {
+    color: #64ffda;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.designer-link:hover {
+    color: #fff;
+}
+
+.designer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.designer-link:hover::after {
+    width: 100%;
+}
+
+.nickname {
+    color: #8892b0;
+    font-style: italic;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 1.2em;
+    color: #8892b0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #64ffda;
+    transform: translateY(-2px);
 }
 
 /* Animations */
@@ -282,4 +344,62 @@ footer {
         grid-template-columns: 1fr;
         padding: 3rem 5%;
     }
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #8892b0;
+}
+
+.contact-link {
+    color: #64ffda;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+.social-links .contact-link {
+    color: #8892b0;
+}
+
+.social-links .contact-link:hover {
+    color: #64ffda;
+}
+
+/* Format phone number for better readability */
+.contact-info .contact-link[href^="tel"] {
+    font-family: 'Consolas', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* Add at the beginning of the file, after imports */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* This helps with fixed header */
+}
+
+/* Update the sections spacing */
+section {
+    scroll-margin-top: 80px; /* This helps with fixed header */
 } 
