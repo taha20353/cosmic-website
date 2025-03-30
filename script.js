@@ -1,4 +1,4 @@
-// Wait for everything to be loaded
+// Wait for everything to be loaded 
 window.addEventListener('load', function() {
     try {
         // Initialize all components
